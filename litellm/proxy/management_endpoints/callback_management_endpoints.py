@@ -30,9 +30,9 @@ async def list_callbacks():
     from litellm import logging_callback_manager
 
     # Get callbacks organized by type using the callback manager utility
-    callbacks_by_type: Final = logging_callback_manager.get_callbacks_by_type()
+    active_callbacks: Final = logging_callback_manager.get_callbacks_by_type()
 
-    return callbacks_by_type
+    return active_callbacks
 
 
 @router.get(
