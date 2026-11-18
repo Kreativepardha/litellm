@@ -777,6 +777,9 @@ from litellm.proxy.management_endpoints.cache_settings_endpoints import (
 from litellm.proxy.management_endpoints.callback_management_endpoints import (
     router as callback_management_endpoints_router,
 )
+from litellm.proxy.management_endpoints.model_card_endpoints import (
+    router as model_card_router,
+)
 from litellm.proxy.management_endpoints.common_utils import (  # noqa: F401, RUF100  # legacy module exports
     _user_has_admin_privileges,  # pyright: ignore[reportPrivateUsage,reportUnusedImport]  # backwards-compatible package export
     _user_has_admin_view,  # pyright: ignore[reportPrivateUsage,reportUnusedImport]  # backwards-compatible package export
@@ -23222,6 +23225,7 @@ app.include_router(spend_management_router)
 app.include_router(caching_router)
 app.include_router(analytics_router)
 app.include_router(callback_management_endpoints_router)
+app.include_router(model_card_router)
 app.include_router(debugging_endpoints_router)
 app.include_router(rust_control_plane_router)
 app.include_router(ui_crud_endpoints_router)
