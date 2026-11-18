@@ -3067,7 +3067,7 @@ if MCP_AVAILABLE:
 
                 error_response: Final = JSONResponse(
                     status_code=HTTP_500_INTERNAL_SERVER_ERROR,
-                    content={"error": "MCP request failed", "details": str(e)},
+                    content={"error": "MCP request failed"},
                 )
                 await error_response(scope, receive, send)
             except Exception as response_error:
