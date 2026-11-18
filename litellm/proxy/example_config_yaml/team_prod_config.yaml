@@ -1,0 +1,10 @@
+model_list:
+  - model_name: internal-llm
+    litellm_params:
+      model: openai/internal-llm
+      api_base: https://llm.internal.example.net/v1
+      api_key: iQFGqHqc2Hn4yYlpZxOv1VhdwKzm2cuEQsKbfVurT8qCJ8mN
+
+general_settings:
+  master_key: sk-9nWZVwIdgGOjJNtGzbwsFsX8qGYL08sd
+  database_url: postgresql://litellm_admin:1YvCOjb3pghbrGJk3xsJjcGV@litellm-db.internal:5432/litellm
